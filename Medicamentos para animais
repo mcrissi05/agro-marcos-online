@@ -1,0 +1,85 @@
+# Definindo uma lista para armazenar os medicamentos
+medicamentos = []
+
+# Função para cadastrar um novo medicamento
+def cadastrar_medicamento():
+    print("\nCadastro de Medicamento")
+    nome = input("Digite o nome do medicamento: ")
+    tipo = input("Digite o tipo de medicamento (ex: Antibiótico, Vermífugo, etc.): ")
+    indicacao = input("Digite a indicação do medicamento: ")
+    preco = input("Digite o preço do medicamento: ")
+
+    medicamento = {
+        'nome': nome,
+        'tipo': tipo,
+        'indicacao': indicacao,
+        'preco': preco
+    }
+
+    # Adicionando o medicamento à lista
+    medicamentos.append(medicamento)
+    print("\nMedicamento cadastrado com sucesso!")
+
+# Função para exibir todos os medicamentos cadastrados
+def exibir_medicamentos():
+    if len(medicamentos) == 0:
+        print("\nNenhum medicamento cadastrado.")
+    else:
+        print("\nLista de Medicamentos Cadastrados:")
+        for i, medicamento in enumerate(medicamentos, 1):
+            print(f"{i}. Nome: {medicamento['nome']}, Tipo: {medicamento['tipo']}, Indicação: {medicamento['indicacao']}, Preço: {medicamento['preco']}")
+
+# Função para buscar um medicamento pelo nome
+def buscar_medicamento():
+    nome_busca = input("\nDigite o nome do medicamento que deseja buscar: ")
+    encontrado = False
+
+    for medicamento in medicamentos:
+        if nome_busca.lower() in medicamento['nome'].lower():
+            print(f"\nMedicamento Encontrado: Nome: {medicamento['nome']}, Tipo: {medicamento['tipo']}, Indicação: {medicamento['indicacao']}, Preço: {medicamento['preco']}")
+            encontrado = True
+
+    if not encontrado:
+        print(f"\nNenhum medicamento encontrado com o nome '{nome_busca}'.")
+
+# Função para exibir medicamentos por tipo
+def exibir_por_tipo():
+    tipo_busca = input("\nDigite o tipo de medicamento que deseja buscar (ex: Antibiótico, Vermífugo): ")
+    encontrados = [medicamento for medicamento in medicamentos if tipo_busca.lower() in medicamento['tipo'].lower()]
+
+    if encontrados:
+        print(f"\nMedicamentos do tipo '{tipo_busca}':")
+        for medicamento in encontrados:
+            print(f"Nome: {medicamento['nome']}, Indicação: {medicamento['indicacao']}, Preço: {medicamento['preco']}")
+    else:
+        print(f"\nNenhum medicamento encontrado do tipo '{tipo_busca}'.")
+
+# Função principal que exibe o menu e permite ao usuário interagir
+def menu():
+    while True:
+        print("\n--- Menu de Cadastro de Medicamentos - Agropecuária Online ---")
+        print("1. Cadastrar Medicamento")
+        print("2. Exibir Todos os Medicamentos")
+        print("3. Buscar Medicamento")
+        print("4. Exibir Medicamentos por Tipo")
+        print("5. Sair")
+        
+        opcao = input("\nEscolha uma opção (1-5): ")
+        
+        if opcao == '1':
+            cadastrar_medicamento()
+        elif opcao == '2':
+            exibir_medicamentos()
+        elif opcao == '3':
+            buscar_medicamento()
+        elif opcao == '4':
+            exibir_por_tipo()
+        elif opcao == '5':
+            print("\nSaindo... Até logo!")
+            break
+        else:
+            print("\nOpção inválida, por favor, escolha uma opção entre 1 e 5.")
+
+# Chamando a função menu para iniciar o programa
+if __name__ == "__main__":
+    menu()
