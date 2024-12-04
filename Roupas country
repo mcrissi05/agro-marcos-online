@@ -1,0 +1,39 @@
+--- Gerenciador de Tarefas ---
+1. Adicionar tarefa
+2. Remover tarefa
+3. Listar tarefas
+4. Sair
+
+Escolha uma opção (1-4): 1
+Digite a tarefa que deseja adicionar: Estudar Python
+Tarefa 'Estudar Python' adicionada com sucesso!
+
+--- Gerenciador de Tarefas ---
+1. Adicionar tarefa
+2. Remover tarefa
+3. Listar tarefas
+4. Sair
+
+Escolha uma opção (1-4): 3
+
+Tarefas Cadastradas:
+1. Estudar Python
+
+--- Gerenciador de Tarefas ---
+1. Adicionar tarefa
+2. Remover tarefa
+3. Listar tarefas
+4. Sair
+
+Escolha uma opção (1-4): 2
+Digite o número da tarefa que deseja remover: 1
+Tarefa 'Estudar Python' removida com sucesso!
+
+--- Gerenciador de Tarefas ---
+1. Adicionar tarefa
+2. Remover tarefa
+3. Listar tarefas
+4. Sair
+
+Escolha uma opção (1-4): 4
+Saindo... Até logo!
