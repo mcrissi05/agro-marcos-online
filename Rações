@@ -1,0 +1,48 @@
+--- Gerenciador de Rações - Agropecuária Online ---
+1. Cadastrar Ração
+2. Remover Ração
+3. Listar Todas as Rações
+4. Buscar Rações por Tipo de Animal
+5. Sair
+
+Escolha uma opção (1-5): 1
+Digite o nome da ração: Ração Premium para Cães
+Digite o tipo de animal (ex: Cão, Gato, Cavalo, etc.): Cão
+Digite a quantidade disponível (kg): 10
+Digite o preço da ração (R$): 89,90
+Ração 'Ração Premium para Cães' cadastrada com sucesso!
+
+--- Gerenciador de Rações - Agropecuária Online ---
+1. Cadastrar Ração
+2. Remover Ração
+3. Listar Todas as Rações
+4. Buscar Rações por Tipo de Animal
+5. Sair
+
+Escolha uma opção (1-5): 3
+
+Lista de Rações Cadastradas:
+1. Nome: Ração Premium para Cães, Tipo de Animal: Cão, Quantidade: 10 kg, Preço: R$ 89,90
+
+--- Gerenciador de Rações - Agropecuária Online ---
+1. Cadastrar Ração
+2. Remover Ração
+3. Listar Todas as Rações
+4. Buscar Rações por Tipo de Animal
+5. Sair
+
+Escolha uma opção (1-5): 4
+Digite o tipo de animal (ex: Cão, Gato, Cavalo): Cão
+
+Rações para o tipo de animal 'Cão':
+Nome: Ração Premium para Cães, Quantidade: 10 kg, Preço: R$ 89,90
+
+--- Gerenciador de Rações - Agropecuária Online ---
+1. Cadastrar Ração
+2. Remover Ração
+3. Listar Todas as Rações
+4. Buscar Rações por Tipo de Animal
+5. Sair
+
+Escolha uma opção (1-5): 5
+Saindo... Até logo!
