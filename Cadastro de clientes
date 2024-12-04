@@ -1,0 +1,70 @@
+# Definindo uma lista para armazenar os clientes
+clientes = []
+
+# Função para cadastrar um novo cliente
+def cadastrar_cliente():
+    print("\nCadastro de Cliente")
+    nome = input("Digite o nome do cliente: ")
+    email = input("Digite o e-mail do cliente: ")
+    telefone = input("Digite o telefone do cliente: ")
+    endereco = input("Digite o endereço do cliente: ")
+
+    cliente = {
+        'nome': nome,
+        'email': email,
+        'telefone': telefone,
+        'endereco': endereco
+    }
+
+    # Adicionando o cliente à lista
+    clientes.append(cliente)
+    print("\nCliente cadastrado com sucesso!")
+
+# Função para exibir todos os clientes cadastrados
+def exibir_clientes():
+    if len(clientes) == 0:
+        print("\nNenhum cliente cadastrado.")
+    else:
+        print("\nLista de Clientes Cadastrados:")
+        for i, cliente in enumerate(clientes, 1):
+            print(f"{i}. Nome: {cliente['nome']}, E-mail: {cliente['email']}, Telefone: {cliente['telefone']}, Endereço: {cliente['endereco']}")
+
+# Função para buscar um cliente pelo nome
+def buscar_cliente():
+    nome_busca = input("\nDigite o nome do cliente que deseja buscar: ")
+    encontrado = False
+
+    for cliente in clientes:
+        if nome_busca.lower() in cliente['nome'].lower():
+            print(f"\nCliente Encontrado: Nome: {cliente['nome']}, E-mail: {cliente['email']}, Telefone: {cliente['telefone']}, Endereço: {cliente['endereco']}")
+            encontrado = True
+
+    if not encontrado:
+        print(f"\nNenhum cliente encontrado com o nome '{nome_busca}'.")
+
+# Função principal que exibe o menu e permite ao usuário interagir
+def menu():
+    while True:
+        print("\n--- Menu de Cadastro de Clientes - Agropecuária Online ---")
+        print("1. Cadastrar Cliente")
+        print("2. Exibir Todos os Clientes")
+        print("3. Buscar Cliente")
+        print("4. Sair")
+        
+        opcao = input("\nEscolha uma opção (1-4): ")
+        
+        if opcao == '1':
+            cadastrar_cliente()
+        elif opcao == '2':
+            exibir_clientes()
+        elif opcao == '3':
+            buscar_cliente()
+        elif opcao == '4':
+            print("\nSaindo... Até logo!")
+            break
+        else:
+            print("\nOpção inválida, por favor, escolha uma opção entre 1 e 4.")
+
+# Chamando a função menu para iniciar o programa
+if __name__ == "__main__":
+    menu()
